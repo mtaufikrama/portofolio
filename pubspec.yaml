@@ -1,0 +1,64 @@
+name: portofolio
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  animated_text_kit: ^4.2.2
+  bordered_text: ^2.0.0
+  cupertino_icons: ^1.0.2
+  dismissible_page: ^1.0.1
+  flutter:
+    sdk: flutter
+  flutter_staggered_animations: ^1.1.1
+  get: 4.6.5
+  google_fonts: ^4.0.3
+  google_translator: ^1.0.0
+  localstorage: ^4.0.0+1
+  lottie: ^2.2.0
+  pie_chart: ^5.3.2
+  scroll_to_index: ^3.0.1
+  translator: ^0.1.7
+  url_launcher: ^6.1.9
+  url_strategy: ^0.2.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.12.0
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/foto/pp.png"
+  web:
+    generate: true
+    image_path: "assets/foto/pp.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/foto/pp.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/foto/pp.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/lottie/
+    - assets/foto/
+    - assets/icon/
+    - assets/portofolio/avatar/
+    - assets/portofolio/bayu/
+    - assets/portofolio/crofflite/
+    - assets/portofolio/mecrypt/
+    - assets/portofolio/thrilogic/
+    - assets/logo/
+    - assets/sertif/
+    - assets/button/
