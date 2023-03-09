@@ -12,7 +12,18 @@ Container portofolio(BuildContext context) {
   double height = getHeight(context) / 2;
   return Container(
     height: height <= 250 ? 250 : height,
-    decoration: const BoxDecoration(color: Color.fromARGB(255, 103, 80, 164)),
+    decoration: const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          Colors.white,
+          Colors.white,
+          Color.fromARGB(255, 131, 129, 255),
+          Color.fromARGB(255, 4, 0, 255),
+        ],
+      ),
+    ),
     child: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -26,6 +37,7 @@ Container portofolio(BuildContext context) {
                 mobile: 20.0,
                 desktop: 30.0,
               ),
+              color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,
@@ -84,7 +96,7 @@ Container portofolio(BuildContext context) {
                                         ),
                                       ),
                                       subtitle: teksLanguage(
-                                        porto.deskripsi,
+                                        porto.kategori,
                                         kodeBahasa:
                                             Get.parameters['lang'] ?? 'en',
                                         maxLines: 1,

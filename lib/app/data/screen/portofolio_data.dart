@@ -17,6 +17,7 @@ class DataPorto {
         'ThriLogic is an application that makes it easier for users to buy thrift products or quality used goods at the best prices. Users can purchase thrift products online and enjoy a more convenient and efficient shopping experience.',
     tujuan:
         'ThriLogic was created to simplify the process of buying thrift products or quality used goods at the best prices. This application helps users find the items they want at a more affordable price.',
+    kategori: 'Our App',
     frame: Porto.frameThriLogic,
     primaryColor: Color.fromRGBO(255, 110, 42, 1),
     secondaryColor: Color.fromRGBO(166, 87, 55, 1),
@@ -64,6 +65,7 @@ class DataPorto {
     secondaryColor: Color.fromRGBO(0, 16, 71, 1),
     tujuan:
         'MeCrypt aims to allow users to simulate crypto currency transactions before making actual transactions.',
+    kategori: 'Own App',
     team: [
       Team(
         image: Porto.taufik,
@@ -97,6 +99,7 @@ class DataPorto {
     secondaryColor: Color.fromARGB(255, 238, 163, 38),
     tujuan:
         'Crofflite is designed to help croffle sellers optimize their business and increase efficiency in managing queues and finances every day.',
+    kategori: 'Own App',
     team: [
       Team(
         image: Porto.taufik,
@@ -128,6 +131,7 @@ class DataPorto {
     secondaryColor: Color.fromARGB(255, 35, 136, 182),
     tujuan:
         'Bayu aims to try to make the user interface of the by.u application.',
+    kategori: 'Redesign App',
     team: [
       Team(
         image: Porto.taufik,

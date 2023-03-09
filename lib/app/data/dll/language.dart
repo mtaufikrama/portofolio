@@ -17,6 +17,24 @@ Future<String> translates(
   return translate;
 }
 
+String stringTranslate(
+  String text, {
+  required String kodeBahasa,
+}) {
+  String? translate;
+  translates(text, kodeBahasa: kodeBahasa).then(
+    (value) {
+      translate = value;
+      if (translate != null) {
+        return translate;
+      } else {
+        return text;
+      }
+    },
+  );
+  return translate ?? text;
+}
+
 FutureBuilder<String> translateTeks(
   String text, {
   required String kodeBahasa,

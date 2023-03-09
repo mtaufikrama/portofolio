@@ -11,7 +11,18 @@ Container certificate(BuildContext context) {
   double height = getHeight(context) / 2;
   return Container(
     height: height <= 250 ? 250 : height,
-    decoration: const BoxDecoration(color: Colors.red),
+    decoration: const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          Color.fromARGB(255, 255, 17, 0),
+          Color.fromARGB(255, 255, 135, 127),
+          Colors.white,
+          Colors.white,
+        ],
+      ),
+    ),
     child: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -20,7 +31,7 @@ Container certificate(BuildContext context) {
             (isi['certificate']!.title).toUpperCase(),
             kodeBahasa: Get.parameters['lang'] ?? 'en',
             style: Font.regular(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: responsiveDouble(
                 context,
                 mobile: 20.0,
@@ -57,7 +68,10 @@ Container certificate(BuildContext context) {
                             Container(
                               decoration: const BoxDecoration(
                                 gradient: LinearGradient(
-                                  colors: [Colors.black, Colors.transparent],
+                                  colors: [
+                                    Colors.black,
+                                    Colors.transparent,
+                                  ],
                                   begin: Alignment.topCenter,
                                   end: Alignment.bottomCenter,
                                 ),

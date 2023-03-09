@@ -13,10 +13,12 @@ class Portfolio {
   final String deskripsi;
   final List<String> fitur;
   final List<String> teknologi;
+  final String kategori;
   const Portfolio({
     required this.nama,
     required this.logo,
     required this.deskripsi,
+    required this.kategori,
     required this.tujuan,
     required this.frame,
     required this.primaryColor,

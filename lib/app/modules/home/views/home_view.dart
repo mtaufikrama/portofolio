@@ -1,10 +1,10 @@
+import 'package:portofolio/app/data/dll/font.dart';
 import 'package:portofolio/app/data/dll/language.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portofolio/app/data/dll/responsive.dart';
+import 'package:portofolio/app/modules/home/controllers/home_controller.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-import '../../../data/dll/font.dart';
-import '../../../data/dll/responsive.dart';
-import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);

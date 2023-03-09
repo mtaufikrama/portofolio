@@ -114,7 +114,7 @@ SizedBox openingPage(BuildContext context) {
                       waitDuration: const Duration(milliseconds: 300),
                       message: 'Portfolio',
                       child: InkWell(
-                        onTap: () async => await controller.scrollIndex(5),
+                        onTap: () async => await controller.scrollIndex(4),
                         child: CircleAvatar(
                           backgroundColor: Colors.white,
                           child: Padding(
