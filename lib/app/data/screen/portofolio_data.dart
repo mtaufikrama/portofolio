@@ -14,10 +14,10 @@ class DataPorto {
     nama: 'ThriLogic',
     logo: Porto.thrilogic,
     deskripsi:
-        'ThriLogic is an application that makes it easier for users to buy thrift products or quality used goods at the best prices. Users can purchase thrift products online and enjoy a more convenient and efficient shopping experience.',
+        'ThriLogic is an application designed to facilitate users in purchasing thrift products or high-quality used goods at the most competitive prices. Through this application, users can conveniently buy thrift products online and enjoy a more efficient shopping experience.',
     tujuan:
-        'ThriLogic was created to simplify the process of buying thrift products or quality used goods at the best prices. This application helps users find the items they want at a more affordable price.',
-    kategori: 'Our App',
+        'ThriLogic was created to simplify the process of buying thrift products or high-quality used goods at the best prices. This application helps users find the items they want at a more affordable price.',
+    kategori: 'Collab App',
     frame: Porto.frameThriLogic,
     primaryColor: Color.fromRGBO(255, 110, 42, 1),
     secondaryColor: Color.fromRGBO(166, 87, 55, 1),
@@ -48,8 +48,8 @@ class DataPorto {
     ],
     fitur: [
       'It has light mode and dark mode features so that users are more comfortable in shopping.',
-      'Admin ability to add, update, and delete products.',
-      'Uses the lottie package for animation which makes the UI more attractive.',
+      'Admin has the ability to add, update, and delete products.',
+      'The application uses the Lottie package for animations, which makes the UI more attractive.',
     ],
     teknologi: [
       'Flutter as a framework for developing android applications and websites.',
@@ -64,30 +64,30 @@ class DataPorto {
     primaryColor: Color.fromARGB(255, 0, 6, 183),
     secondaryColor: Color.fromRGBO(0, 16, 71, 1),
     tujuan:
-        'MeCrypt aims to allow users to simulate crypto currency transactions before making actual transactions.',
-    kategori: 'Own App',
+        'MeCrypt aims to enable users to simulate cryptocurrency transactions before making actual transactions.',
+    kategori: 'Self-made App',
     team: [
       Team(
         image: Porto.taufik,
         nama: 'Muhammad Taufik Ramadhan',
-        sebagai: 'All Jobs',
+        sebagai: 'Full Stack Developer',
       ),
     ],
     urlAndroid:
         'https://drive.google.com/drive/folders/1KBushKHmGik-iVd1D04_nUHJRes-suCW?usp=share_link',
     urlWebsite: 'https://mecrypt.metir.my.id/',
     deskripsi:
-        'MeCrypt is a cryptocurrency simulation application that allows users to buy and track the exchange rates of various cryptocurrencies such as Bitcoin, Ethereum and Litecoin. This app has a real-time feature that allows users to view continuously updated prices of cryptocurrencies.',
+        'MeCrypt is a cryptocurrency simulation application that enables users to purchase and track exchange rates of various cryptocurrencies, such as Bitcoin, Ethereum, and Litecoin. This app features a real-time function that allows users to view continuously updated cryptocurrency prices.',
     fitur: [
-      'Has a list of popular cryptocurrencies to choose from and track.',
-      'Data is stored locally using the Hive package.',
-      'There is a wishlist feature so users can monitor the cryptocurrency they want to buy later.',
-      'Attractive User Interface and dark mode to make it comfortable to look at.',
+      'Includes a list of popular cryptocurrencies that users can choose from and track.',
+      'Stores data locally using the Hive package.',
+      'Features a wishlist function that allows users to monitor cryptocurrencies they plan to purchase in the future.',
+      'Offers an attractive user interface and a dark mode option for comfortable viewing.',
     ],
     teknologi: [
-      'Flutter as a framework for developing mobile applications and websites.',
-      'Hive as local database.',
-      'Indodax API to get real-time cryptocurrency exchange rate data.',
+      'Uses Flutter as a framework for developing mobile applications and websites.',
+      'Uses Hive as the local database.',
+      'Utilizes the Indodax API to obtain real-time cryptocurrency exchange rate data.',
     ],
   );
 
@@ -98,29 +98,29 @@ class DataPorto {
     primaryColor: Color.fromARGB(255, 251, 209, 123),
     secondaryColor: Color.fromARGB(255, 238, 163, 38),
     tujuan:
-        'Crofflite is designed to help croffle sellers optimize their business and increase efficiency in managing queues and finances every day.',
-    kategori: 'Own App',
+        'Crofflite is designed to assist croffle sellers in optimizing their business and increasing efficiency in managing queues and finances on a daily basis.',
+    kategori: 'Self-made App',
     team: [
       Team(
         image: Porto.taufik,
         nama: 'Muhammad Taufik Ramadhan',
-        sebagai: 'All Jobs',
+        sebagai: 'Full Stack Developer',
       ),
     ],
     urlAndroid:
         'https://drive.google.com/drive/folders/1GCPOIhq13goRju4D9AhBsh54HDRtuo9S?usp=share_link',
     urlWebsite: 'https://mecrypt.metir.my.id/',
     deskripsi:
-        'Crofflite is an application to help croffle sellers manage their customer queues and daily financial planning.',
+        'Crofflite is an application designed to help croffle sellers manage their customer queues and daily financial planning.',
     fitur: [
-      'Has a buyer queue feature that allows croffle sellers to see the number of buyers waiting in the queue.',
-      'Calculates the croffle sellers daily sales turnover based on the sales data entered.',
-      'Has a feature to calculate the total purchases of each buyer, so sellers can easily find out the contribution of each buyer to their sales.',
-      'Sellers can view their overall sales performance and perform further analysis.',
+      'Features a buyer queue function that allows croffle sellers to view the number of customers waiting in the queue.',
+      'Calculates the croffle sellers daily sales turnover based on the entered sales data.',
+      'Includes a feature to calculate the total purchases made by each buyer, making it easy for sellers to determine each buyers contribution to their sales.',
+      'Enables sellers to view their overall sales performance and conduct further analysis.',
     ],
     teknologi: [
-      'Flutter as a framework for developing mobile applications and websites.',
-      'Localstorage as local database.',
+      'Uses Flutter as a framework for developing mobile applications and websites.',
+      'Utilizes Localstorage as the local database.',
     ],
   );
   static const bayu = Portfolio(
@@ -129,21 +129,20 @@ class DataPorto {
     frame: Porto.frameBayu,
     primaryColor: Color.fromARGB(255, 0, 188, 241),
     secondaryColor: Color.fromARGB(255, 35, 136, 182),
-    tujuan:
-        'Bayu aims to try to make the user interface of the by.u application.',
+    tujuan: 'Bayu aims to improve the user interface of the By.U application.',
     kategori: 'Redesign App',
     team: [
       Team(
         image: Porto.taufik,
         nama: 'Muhammad Taufik Ramadhan',
-        sebagai: 'All Jobs',
+        sebagai: 'Full Stack Developer',
       ),
     ],
     urlAndroid:
         'https://drive.google.com/drive/folders/1lVklQGknaLIJXBsUzKMJjH24OVt66WYK?usp=share_link',
     urlWebsite: 'https://bayu.metir.my.id/',
     deskripsi:
-        'Bayu is an application that was redesigned from the by.u application.',
+        'Bayu is an application that has been redesigned from the By.U application.',
     fitur: [],
     teknologi: [],
   );

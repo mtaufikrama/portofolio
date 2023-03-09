@@ -67,6 +67,36 @@ class PortfolioView extends GetView<PortfolioController> {
                     ],
                   ),
                 ),
+                Container(
+                  margin: const EdgeInsets.only(
+                    top: 30.0,
+                  ),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        porto.primaryColor,
+                        porto.secondaryColor,
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 5.0,
+                    horizontal: 15.0,
+                  ),
+                  child: teksLanguage(
+                    (porto.kategori).toUpperCase(),
+                    kodeBahasa: lang,
+                    style: Font.regular(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(30),
                   child: teksLanguage(
