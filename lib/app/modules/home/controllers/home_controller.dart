@@ -4,6 +4,7 @@ import 'package:portofolio/app/modules/home/views/subview/certificate.dart';
 import 'package:portofolio/app/modules/home/views/subview/closing.dart';
 import 'package:portofolio/app/modules/home/views/subview/myskill.dart';
 import 'package:portofolio/app/modules/home/views/subview/opening.dart';
+import 'package:portofolio/app/modules/home/views/subview/pengalaman.dart';
 import 'package:portofolio/app/modules/home/views/subview/portofolio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -29,15 +30,15 @@ class HomeController extends GetxController {
     );
   }
 
-  List<Widget> listWidget(BuildContext context) => [
-        openingPage(context),
-        aboutMe(context),
-        mySkill(context),
-        certificate(context),
-        // experience(context),
-        portofolio(context),
-        closing(context),
-      ];
+  List<Widget> listWidget = [
+    const OpeningMenu(),
+    const AboutMeMenu(),
+    const MySkillMenu(),
+    const CertificateMenu(),
+    // ExperienceMenu(),
+    const PortofolioMenu(),
+    const ClosingMenu(),
+  ];
 
   List bio(BuildContext context) => <Map<String, dynamic>>[
         {

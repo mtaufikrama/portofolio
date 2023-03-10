@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portofolio/app/data/dll/responsive.dart';
 import 'package:portofolio/app/modules/home/controllers/home_controller.dart';
+import 'package:portofolio/app/modules/home/views/subview/appbar.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -14,70 +15,20 @@ class HomeView extends GetView<HomeController> {
       body: Stack(
         children: [
           ListView(
+            physics: const BouncingScrollPhysics(),
             controller: controller.autoScrollController,
             children: List.generate(
-              controller.listWidget(context).length,
+              controller.listWidget.length,
               (index) => AutoScrollTag(
                 key: ValueKey<int>(index),
                 controller: controller.autoScrollController,
                 index: index,
-                child: controller.listWidget(context)[index],
+                child: controller.listWidget[index],
               ),
             ),
           ),
-          appBarButton(context),
+          const AppBarButton(),
         ],
-      ),
-    );
-  }
-
-  Align appBarButton(BuildContext context) {
-    return Align(
-      alignment: Alignment.topRight,
-      child: Padding(
-        padding: const EdgeInsets.all(30.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: controller.buttonAppBar
-              .map((e) => Padding(
-                  padding: const EdgeInsets.all(5),
-                  child: responsiveWidget(
-                    context,
-                    mobile: Tooltip(
-                      waitDuration: const Duration(milliseconds: 300),
-                      message: e['label'] as String,
-                      child: ElevatedButton(
-                        onPressed: () async =>
-                            await controller.scrollIndex(e['index']),
-                        child: e['icon'] as ImageIcon,
-                      ),
-                    ),
-                    desktop: ElevatedButton.icon(
-                      onPressed: () async =>
-                          await controller.scrollIndex(e['index'] as int),
-                      icon: e['icon'] as ImageIcon,
-                      label: teksLanguage(
-                        e['label'] as String,
-                        kodeBahasa: Get.parameters['lang'] ?? 'en',
-                        style: Font.regular(
-                          fontSize: 17.0,
-                        ),
-                      ),
-                    ),
-                    tablet: ElevatedButton.icon(
-                      onPressed: () async =>
-                          await controller.scrollIndex(e['index'] as int),
-                      icon: e['icon'] as ImageIcon,
-                      label: Text(
-                        e['label'] as String,
-                        style: Font.regular(
-                          fontSize: 13.0,
-                        ),
-                      ),
-                    ),
-                  )))
-              .toList(),
-        ),
       ),
     );
   }

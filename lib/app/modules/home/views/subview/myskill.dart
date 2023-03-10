@@ -7,23 +7,28 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pie_chart/pie_chart.dart';
 
-Row mySkill(BuildContext context) {
-  return Row(
-    children: [
-      pieChart(
-        context,
-        hardOrsoft: 'hard',
-        secondaryColor: const Color.fromARGB(255, 0, 79, 144),
-        primaryColor: const Color.fromARGB(255, 105, 188, 255),
-      ),
-      pieChart(
-        context,
-        hardOrsoft: 'soft',
-        primaryColor: const Color.fromARGB(255, 0, 79, 144),
-        secondaryColor: const Color.fromARGB(255, 105, 188, 255),
-      ),
-    ],
-  );
+class MySkillMenu extends StatelessWidget {
+  const MySkillMenu({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        pieChart(
+          context,
+          hardOrsoft: 'hard',
+          secondaryColor: const Color.fromARGB(255, 0, 79, 144),
+          primaryColor: const Color.fromARGB(255, 105, 188, 255),
+        ),
+        pieChart(
+          context,
+          hardOrsoft: 'soft',
+          primaryColor: const Color.fromARGB(255, 0, 79, 144),
+          secondaryColor: const Color.fromARGB(255, 105, 188, 255),
+        ),
+      ],
+    );
+  }
 }
 
 Expanded pieChart(
