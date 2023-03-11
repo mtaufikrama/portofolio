@@ -3,11 +3,12 @@ import 'package:portofolio/app/data/dll/language.dart';
 import 'package:portofolio/app/data/dll/responsive.dart';
 import 'package:portofolio/app/data/dll/services.dart';
 import 'package:portofolio/app/data/screen/inti_apps.dart';
+import 'package:portofolio/app/modules/home/controllers/home_controller.dart';
 import 'package:portofolio/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ExperienceMenu extends StatelessWidget {
+class ExperienceMenu extends GetView<HomeController> {
   const ExperienceMenu({super.key});
 
   @override

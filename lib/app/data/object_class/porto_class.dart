@@ -4,6 +4,8 @@ class Portfolio {
   final String nama;
   final String logo;
   final String frame;
+  final int frameAndroid;
+  final int frameWebsite;
   final Color primaryColor;
   final Color secondaryColor;
   final String tujuan;
@@ -21,6 +23,8 @@ class Portfolio {
     required this.kategori,
     required this.tujuan,
     required this.frame,
+    required this.frameAndroid,
+    required this.frameWebsite,
     required this.primaryColor,
     required this.secondaryColor,
     required this.urlAndroid,

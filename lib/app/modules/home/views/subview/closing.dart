@@ -6,8 +6,9 @@ import 'package:portofolio/app/data/object_class/kontak_class.dart';
 import 'package:portofolio/app/data/screen/inti_apps.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portofolio/app/modules/home/controllers/home_controller.dart';
 
-class ClosingMenu extends StatelessWidget {
+class ClosingMenu extends GetView<HomeController> {
   const ClosingMenu({super.key});
 
   @override

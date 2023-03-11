@@ -19,6 +19,8 @@ class DataPorto {
         'ThriLogic was created to simplify the process of buying thrift products or high-quality used goods at the best prices. This application helps users find the items they want at a more affordable price.',
     kategori: 'Collab App',
     frame: Porto.frameThriLogic,
+    frameAndroid: 3,
+    frameWebsite: 0,
     primaryColor: Color.fromRGBO(255, 110, 42, 1),
     secondaryColor: Color.fromRGBO(166, 87, 55, 1),
     urlAndroid:
@@ -61,6 +63,8 @@ class DataPorto {
     nama: 'MeCrypt',
     logo: Porto.mecrypt,
     frame: Porto.frameMeCrypt,
+    frameAndroid: 3,
+    frameWebsite: 3,
     primaryColor: Color.fromARGB(255, 0, 6, 183),
     secondaryColor: Color.fromRGBO(0, 16, 71, 1),
     tujuan:
@@ -95,6 +99,8 @@ class DataPorto {
     nama: 'Crofflite',
     logo: Porto.crofflite,
     frame: Porto.frameCrofflite,
+    frameAndroid: 3,
+    frameWebsite: 0,
     primaryColor: Color.fromARGB(255, 251, 209, 123),
     secondaryColor: Color.fromARGB(255, 238, 163, 38),
     tujuan:
@@ -109,7 +115,7 @@ class DataPorto {
     ],
     urlAndroid:
         'https://drive.google.com/drive/folders/1GCPOIhq13goRju4D9AhBsh54HDRtuo9S?usp=share_link',
-    urlWebsite: 'https://mecrypt.metir.my.id/',
+    urlWebsite: '',
     deskripsi:
         'Crofflite is an application designed to help croffle sellers manage their customer queues and daily financial planning.',
     fitur: [
@@ -127,6 +133,8 @@ class DataPorto {
     nama: 'Bayu',
     logo: Porto.bayu,
     frame: Porto.frameBayu,
+    frameAndroid: 3,
+    frameWebsite: 3,
     primaryColor: Color.fromARGB(255, 0, 188, 241),
     secondaryColor: Color.fromARGB(255, 35, 136, 182),
     tujuan: 'Bayu aims to improve the user interface of the By.U application.',

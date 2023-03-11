@@ -10,7 +10,7 @@ final Map<String, Isi> isi = {
   'about': const Isi(
     title: 'About Me',
     subtitle:
-        "I am an expert in the field of Mobile Developer using the Flutter framework. Currently, I am a student majoring in Informatics at Gunadarma University with a current total GPA of 3.48. I'm learning the Flutter framework and I like to experiment with things. I am a conscientious, patient and reliable person.",
+        "I am an expert in the field of mobile development using the Flutter framework. Currently, I am a student majoring in Informatics at Gunadarma University, with a current total GPA of 3.48. I enjoy learning about the Flutter framework and experimenting with it. Additionally, I am a conscientious, patient, and reliable person.",
   ),
   'soft_skill': Isi(
     title: 'Soft Skill',

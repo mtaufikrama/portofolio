@@ -10,25 +10,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
-class OpeningMenu extends StatelessWidget {
+class OpeningMenu extends GetView<HomeController> {
   const OpeningMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var controller = Get.put(HomeController());
     double height = getHeight(context);
     return SizedBox(
       width: getWidth(context),
       height: height <= 500 ? 500 : height,
       child: Stack(
         children: [
-          ClipRRect(
-            child: Lottie.asset(
-              'assets/lottie/bg.json',
-              width: getWidth(context),
-              height: height <= 500 ? 500 : height,
-              fit: BoxFit.fill,
-            ),
+          Lottie.asset(
+            'assets/lottie/bg.json',
+            width: getWidth(context),
+            height: height <= 500 ? 500 : height,
+            fit: BoxFit.fill,
           ),
           Center(
             child: Column(

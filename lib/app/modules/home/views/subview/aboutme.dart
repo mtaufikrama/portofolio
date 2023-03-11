@@ -5,8 +5,9 @@ import 'package:portofolio/app/data/dll/services.dart';
 import 'package:portofolio/app/data/screen/inti_apps.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portofolio/app/modules/home/controllers/home_controller.dart';
 
-class AboutMeMenu extends StatelessWidget {
+class AboutMeMenu extends GetView<HomeController> {
   const AboutMeMenu({super.key});
 
   @override

@@ -11,6 +11,10 @@ class Sertif {
 }
 
 class Porto {
+  static String android(String project, {required int index1}) =>
+      'assets/portofolio/$project/andro$index1.png';
+  static String website(String project, {required int index1}) =>
+      'assets/portofolio/$project/web$index1.png';
   static const taufik = 'assets/portofolio/avatar/taufik.png';
   static const delvy = 'assets/portofolio/avatar/delvy.png';
   static const roni = 'assets/portofolio/avatar/roni.png';

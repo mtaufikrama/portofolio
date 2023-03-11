@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:portofolio/app/data/dll/font.dart';
 import 'package:portofolio/app/data/dll/language.dart';
 import 'package:portofolio/app/data/dll/responsive.dart';
 import 'package:portofolio/app/modules/home/controllers/home_controller.dart';
 
-class AppBarButton extends StatelessWidget {
+class AppBarButton extends GetView<HomeController> {
   const AppBarButton({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(HomeController());
     return Align(
       alignment: Alignment.topRight,
       child: Padding(

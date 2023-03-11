@@ -6,8 +6,9 @@ import 'package:portofolio/app/data/screen/inti_apps.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pie_chart/pie_chart.dart';
+import 'package:portofolio/app/modules/home/controllers/home_controller.dart';
 
-class MySkillMenu extends StatelessWidget {
+class MySkillMenu extends GetView<HomeController> {
   const MySkillMenu({super.key});
 
   @override

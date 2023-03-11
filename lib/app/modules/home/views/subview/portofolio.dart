@@ -4,11 +4,13 @@ import 'package:portofolio/app/data/dll/responsive.dart';
 import 'package:portofolio/app/data/dll/services.dart';
 import 'package:portofolio/app/data/object_class/porto_class.dart';
 import 'package:portofolio/app/data/screen/inti_apps.dart';
+import 'package:portofolio/app/modules/home/controllers/home_controller.dart';
+import 'package:portofolio/app/modules/home/views/subview/icon_devices.dart';
 import 'package:portofolio/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class PortofolioMenu extends StatelessWidget {
+class PortofolioMenu extends GetView<HomeController> {
   const PortofolioMenu({super.key});
 
   @override
@@ -133,43 +135,20 @@ class PortofolioMenu extends StatelessWidget {
                                       ),
                                       Row(
                                         children: [
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Color.fromARGB(
-                                                207,
-                                                255,
-                                                255,
-                                                255,
-                                              ),
-                                              borderRadius: BorderRadius.only(
-                                                topRight: Radius.circular(
-                                                  10,
-                                                ),
-                                              ),
-                                            ),
-                                            child: Row(
-                                              children: [
-                                                IconButton(
-                                                  tooltip: 'android',
-                                                  onPressed: () => launcher(
-                                                      porto.urlAndroid),
-                                                  icon: const Icon(
-                                                    Icons.android,
-                                                    color: Colors.green,
-                                                    size: 24.0,
+                                          Align(
+                                            alignment: Alignment.bottomLeft,
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                color: porto.secondaryColor
+                                                    .withOpacity(0.7),
+                                                borderRadius:
+                                                    const BorderRadius.only(
+                                                  topRight: Radius.circular(
+                                                    10,
                                                   ),
                                                 ),
-                                                IconButton(
-                                                  tooltip: 'website',
-                                                  onPressed: () => launcher(
-                                                      porto.urlWebsite),
-                                                  icon: const Icon(
-                                                    Icons.web_outlined,
-                                                    color: Colors.green,
-                                                    size: 24.0,
-                                                  ),
-                                                ),
-                                              ],
+                                              ),
+                                              child: IconDevices(porto: porto),
                                             ),
                                           ),
                                           const Spacer(),

@@ -14,11 +14,13 @@ class AppPages {
 
   static final routes = [
     GetPage(
+      transition: Transition.downToUp,
       name: _Paths.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
+      transition: Transition.downToUp,
       name: _Paths.PORTFOLIO,
       page: () => const PortfolioView(),
       binding: PortfolioBinding(),
