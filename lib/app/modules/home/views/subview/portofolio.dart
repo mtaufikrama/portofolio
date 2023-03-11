@@ -15,6 +15,7 @@ class PortofolioMenu extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
+    String lang = Get.parameters['lang'] ?? 'en';
     double height = getHeight(context) / 2;
     return Container(
       height: height <= 250 ? 250 : height,
@@ -36,7 +37,7 @@ class PortofolioMenu extends GetView<HomeController> {
           children: [
             teksLanguage(
               isi['portofolio']!.title.toUpperCase(),
-              kodeBahasa: Get.parameters['lang'] ?? 'en',
+              kodeBahasa: lang,
               style: Font.regular(
                 fontSize: responsiveDouble(
                   context,
@@ -64,7 +65,7 @@ class PortofolioMenu extends GetView<HomeController> {
                       child: InkWell(
                         onTap: () => Get.toNamed(Routes.PORTFOLIO, parameters: {
                           'id': index.toString(),
-                          'lang': Get.parameters['lang'] ?? 'en',
+                          'lang': lang,
                         }),
                         child: AspectRatio(
                           aspectRatio: 16 / 9,
@@ -106,8 +107,7 @@ class PortofolioMenu extends GetView<HomeController> {
                                         ),
                                         subtitle: teksLanguage(
                                           porto.kategori,
-                                          kodeBahasa:
-                                              Get.parameters['lang'] ?? 'en',
+                                          kodeBahasa: lang,
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                           style: Font.regular(
@@ -119,10 +119,8 @@ class PortofolioMenu extends GetView<HomeController> {
                                             ),
                                           ),
                                         ),
-                                        title: teksLanguage(
+                                        title: Text(
                                           porto.nama,
-                                          kodeBahasa:
-                                              Get.parameters['lang'] ?? 'en',
                                           style: Font.regular(
                                             color: Colors.white,
                                             fontSize: responsiveDouble(

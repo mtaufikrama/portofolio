@@ -1,23 +1,13 @@
 import 'package:get/get.dart';
 
 class PortfolioController extends GetxController {
-  //TODO: Implement PortfolioController
+  String id = '0';
+  String lang = '';
 
-  final count = 0.obs;
   @override
   void onInit() {
+    id = Get.parameters['id'] ?? '0';
+    lang = Get.parameters['lang'] ?? 'en';
     super.onInit();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

@@ -1,15 +1,12 @@
-import 'package:portofolio/app/data/dll/services.dart';
 import 'package:portofolio/app/modules/home/views/subview/aboutme.dart';
 import 'package:portofolio/app/modules/home/views/subview/certificate.dart';
 import 'package:portofolio/app/modules/home/views/subview/closing.dart';
 import 'package:portofolio/app/modules/home/views/subview/myskill.dart';
 import 'package:portofolio/app/modules/home/views/subview/opening.dart';
-import 'package:portofolio/app/modules/home/views/subview/pengalaman.dart';
 import 'package:portofolio/app/modules/home/views/subview/portofolio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-
 import '../../../data/dll/font.dart';
 import '../../../data/dll/responsive.dart';
 

@@ -19,9 +19,7 @@ class PortfolioView extends GetView<PortfolioController> {
 
   @override
   Widget build(BuildContext context) {
-    String id = Get.parameters['id'] ?? '0';
-    String lang = Get.parameters['lang'] ?? 'en';
-    Portfolio porto = isi['portofolio']!.subtitle[int.parse(id)];
+    Portfolio porto = isi['portofolio']!.subtitle[int.parse(controller.id)];
     return SafeArea(
       child: Scaffold(
         backgroundColor: porto.primaryColor,
@@ -92,7 +90,7 @@ class PortfolioView extends GetView<PortfolioController> {
                     ),
                     child: teksLanguage(
                       (porto.kategori).toUpperCase(),
-                      kodeBahasa: lang,
+                      kodeBahasa: controller.lang,
                       style: Font.regular(
                         color: Colors.white,
                         fontSize: 25,
@@ -105,7 +103,7 @@ class PortfolioView extends GetView<PortfolioController> {
                     padding: const EdgeInsets.all(30),
                     child: teksLanguage(
                       (porto.deskripsi).toUpperCase(),
-                      kodeBahasa: lang,
+                      kodeBahasa: controller.lang,
                       style: Font.regular(
                         color: porto.secondaryColor,
                         fontSize: 25,
@@ -180,7 +178,7 @@ class PortfolioView extends GetView<PortfolioController> {
                     padding: const EdgeInsets.all(30),
                     child: teksLanguage(
                       (porto.tujuan).toUpperCase(),
-                      kodeBahasa: lang,
+                      kodeBahasa: controller.lang,
                       style: Font.regular(
                         color: porto.secondaryColor,
                         fontSize: 25,
@@ -319,7 +317,7 @@ class PortfolioView extends GetView<PortfolioController> {
                                             const BorderRadius.horizontal(
                                           right: Radius.circular(200),
                                         ),
-                                        device: 'Android',
+                                        device: 'ANDROID',
                                         imageWidget: ListView.builder(
                                           scrollDirection: Axis.horizontal,
                                           itemCount: porto.frameAndroid,
@@ -368,7 +366,7 @@ class PortfolioView extends GetView<PortfolioController> {
                                   : Expanded(
                                       child: Frames(
                                         secondaryColor: porto.secondaryColor,
-                                        device: 'Website',
+                                        device: 'WEBSITE',
                                         borderRadius:
                                             const BorderRadius.horizontal(
                                           left: Radius.circular(200),
@@ -435,7 +433,7 @@ class PortfolioView extends GetView<PortfolioController> {
                                 color: Colors.white,
                                 child: teksLanguage(
                                   ('features').toUpperCase(),
-                                  kodeBahasa: lang,
+                                  kodeBahasa: controller.lang,
                                   style: Font.regular(
                                     color: porto.secondaryColor,
                                     fontSize: 25,
@@ -465,7 +463,7 @@ class PortfolioView extends GetView<PortfolioController> {
                                         Expanded(
                                           child: teksLanguage(
                                             porto.fitur[index],
-                                            kodeBahasa: lang,
+                                            kodeBahasa: controller.lang,
                                             style: Font.regular(
                                               fontSize: 20.0,
                                               color: Colors.white,
@@ -495,7 +493,7 @@ class PortfolioView extends GetView<PortfolioController> {
                                 color: Colors.white,
                                 child: teksLanguage(
                                   ('technology').toUpperCase(),
-                                  kodeBahasa: lang,
+                                  kodeBahasa: controller.lang,
                                   style: Font.regular(
                                     color: porto.secondaryColor,
                                     fontSize: 25,
@@ -525,7 +523,7 @@ class PortfolioView extends GetView<PortfolioController> {
                                         Expanded(
                                           child: teksLanguage(
                                             porto.teknologi[index],
-                                            kodeBahasa: lang,
+                                            kodeBahasa: controller.lang,
                                             style: Font.regular(
                                               fontSize: 20.0,
                                               color: Colors.white,
