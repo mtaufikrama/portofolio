@@ -197,102 +197,222 @@ class PortfolioView extends GetView<PortfolioController> {
                             width: MediaQuery.of(context).size.width * 0.3,
                           ),
                         )
-                      : Row(
-                          children: [
-                            porto.frameAndroid == 0
-                                ? Container()
-                                : Frames(
-                                    secondaryColor: porto.secondaryColor,
-                                    borderRadius: const BorderRadius.horizontal(
-                                      right: Radius.circular(200),
-                                    ),
-                                    device: 'Android',
-                                    imageWidget: ListView.builder(
-                                      scrollDirection: Axis.horizontal,
-                                      itemCount: porto.frameAndroid,
-                                      physics: const BouncingScrollPhysics(),
-                                      itemBuilder:
-                                          (BuildContext context, int index) {
-                                        final String image = Porto.android(
-                                          porto.nama.toLowerCase(),
-                                          index1: index + 1,
-                                        );
-                                        return Padding(
-                                          padding: const EdgeInsets.only(
-                                            left: 10,
-                                          ),
-                                          child: GestureDetector(
-                                            onTap: () =>
-                                                context.pushTransparentRoute(
-                                              ImagepageView(
-                                                tagName: image,
-                                                color: porto.primaryColor,
-                                                image: image,
-                                              ),
-                                              reverseTransitionDuration:
-                                                  const Duration(
-                                                      milliseconds: 500),
-                                              transitionDuration:
-                                                  const Duration(
-                                                      milliseconds: 500),
+                      : responsiveWidget(
+                          context,
+                          mobile: Column(
+                            children: [
+                              porto.frameAndroid == 0
+                                  ? Container()
+                                  : Frames(
+                                      secondaryColor: porto.secondaryColor,
+                                      borderRadius:
+                                          const BorderRadius.horizontal(
+                                        right: Radius.circular(200),
+                                      ),
+                                      device: 'ANDROID',
+                                      imageWidget: ListView.builder(
+                                        scrollDirection: Axis.horizontal,
+                                        itemCount: porto.frameAndroid,
+                                        physics: const BouncingScrollPhysics(),
+                                        itemBuilder:
+                                            (BuildContext context, int index) {
+                                          final String image = Porto.android(
+                                            porto.nama.toLowerCase(),
+                                            index1: index + 1,
+                                          );
+                                          return Padding(
+                                            padding: const EdgeInsets.only(
+                                              left: 10,
                                             ),
-                                            child: Hero(
-                                              tag: image,
-                                              child: Image.asset(
-                                                image,
-                                                fit: BoxFit.contain,
+                                            child: GestureDetector(
+                                              onTap: () =>
+                                                  context.pushTransparentRoute(
+                                                ImagepageView(
+                                                  tagName: image,
+                                                  color: porto.primaryColor,
+                                                  image: image,
+                                                ),
+                                                reverseTransitionDuration:
+                                                    const Duration(
+                                                        milliseconds: 500),
+                                                transitionDuration:
+                                                    const Duration(
+                                                        milliseconds: 500),
                                               ),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                            porto.frameWebsite == 0
-                                ? Container()
-                                : Frames(
-                                    secondaryColor: porto.secondaryColor,
-                                    device: 'Website',
-                                    borderRadius: const BorderRadius.horizontal(
-                                      left: Radius.circular(200),
-                                    ),
-                                    imageWidget: ListView.builder(
-                                      reverse: true,
-                                      scrollDirection: Axis.horizontal,
-                                      itemCount: porto.frameWebsite,
-                                      physics: const BouncingScrollPhysics(),
-                                      itemBuilder:
-                                          (BuildContext context, int index) {
-                                        final String image = Porto.website(
-                                          porto.nama.toLowerCase(),
-                                          index1: index + 1,
-                                        );
-                                        return Padding(
-                                          padding: const EdgeInsets.only(
-                                            right: 10,
-                                          ),
-                                          child: GestureDetector(
-                                            onTap: () =>
-                                                context.pushTransparentRoute(
-                                              ImagepageView(
-                                                tagName: image,
-                                                color: porto.primaryColor,
-                                                image: image,
+                                              child: Hero(
+                                                tag: image,
+                                                child: Image.asset(
+                                                  image,
+                                                  fit: BoxFit.contain,
+                                                ),
                                               ),
                                             ),
-                                            child: Hero(
-                                              tag: image,
-                                              child: Image.asset(
-                                                image,
-                                                fit: BoxFit.contain,
+                                          );
+                                        },
+                                      ),
+                                    ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              porto.frameWebsite == 0
+                                  ? Container()
+                                  : Frames(
+                                      secondaryColor: porto.secondaryColor,
+                                      device: 'WEBSITE',
+                                      borderRadius:
+                                          const BorderRadius.horizontal(
+                                        left: Radius.circular(200),
+                                      ),
+                                      imageWidget: ListView.builder(
+                                        reverse: true,
+                                        scrollDirection: Axis.horizontal,
+                                        itemCount: porto.frameWebsite,
+                                        physics: const BouncingScrollPhysics(),
+                                        itemBuilder:
+                                            (BuildContext context, int index) {
+                                          final String image = Porto.website(
+                                            porto.nama.toLowerCase(),
+                                            index1: index + 1,
+                                          );
+                                          return Padding(
+                                            padding: const EdgeInsets.only(
+                                                right: 10),
+                                            child: GestureDetector(
+                                              onTap: () =>
+                                                  context.pushTransparentRoute(
+                                                ImagepageView(
+                                                  tagName: image,
+                                                  color: porto.primaryColor,
+                                                  image: image,
+                                                ),
+                                                reverseTransitionDuration:
+                                                    const Duration(
+                                                  milliseconds: 500,
+                                                ),
+                                                transitionDuration:
+                                                    const Duration(
+                                                  milliseconds: 500,
+                                                ),
+                                              ),
+                                              child: Hero(
+                                                tag: image,
+                                                child: Image.asset(
+                                                  image,
+                                                  fit: BoxFit.contain,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                        );
-                                      },
+                                          );
+                                        },
+                                      ),
                                     ),
-                                  ),
-                          ],
+                            ],
+                          ),
+                          desktop: Row(
+                            children: [
+                              porto.frameAndroid == 0
+                                  ? Container()
+                                  : Expanded(
+                                      child: Frames(
+                                        secondaryColor: porto.secondaryColor,
+                                        borderRadius:
+                                            const BorderRadius.horizontal(
+                                          right: Radius.circular(200),
+                                        ),
+                                        device: 'Android',
+                                        imageWidget: ListView.builder(
+                                          scrollDirection: Axis.horizontal,
+                                          itemCount: porto.frameAndroid,
+                                          physics:
+                                              const BouncingScrollPhysics(),
+                                          itemBuilder: (BuildContext context,
+                                              int index) {
+                                            final String image = Porto.android(
+                                              porto.nama.toLowerCase(),
+                                              index1: index + 1,
+                                            );
+                                            return Padding(
+                                              padding: const EdgeInsets.only(
+                                                left: 10,
+                                              ),
+                                              child: GestureDetector(
+                                                onTap: () => context
+                                                    .pushTransparentRoute(
+                                                  ImagepageView(
+                                                    tagName: image,
+                                                    color: porto.primaryColor,
+                                                    image: image,
+                                                  ),
+                                                  reverseTransitionDuration:
+                                                      const Duration(
+                                                          milliseconds: 500),
+                                                  transitionDuration:
+                                                      const Duration(
+                                                          milliseconds: 500),
+                                                ),
+                                                child: Hero(
+                                                  tag: image,
+                                                  child: Image.asset(
+                                                    image,
+                                                    fit: BoxFit.contain,
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                    ),
+                              porto.frameWebsite == 0
+                                  ? Container()
+                                  : Expanded(
+                                      child: Frames(
+                                        secondaryColor: porto.secondaryColor,
+                                        device: 'Website',
+                                        borderRadius:
+                                            const BorderRadius.horizontal(
+                                          left: Radius.circular(200),
+                                        ),
+                                        imageWidget: ListView.builder(
+                                          reverse: true,
+                                          scrollDirection: Axis.horizontal,
+                                          itemCount: porto.frameWebsite,
+                                          physics:
+                                              const BouncingScrollPhysics(),
+                                          itemBuilder: (BuildContext context,
+                                              int index) {
+                                            final String image = Porto.website(
+                                              porto.nama.toLowerCase(),
+                                              index1: index + 1,
+                                            );
+                                            return Padding(
+                                              padding: const EdgeInsets.only(
+                                                right: 10,
+                                              ),
+                                              child: GestureDetector(
+                                                onTap: () => context
+                                                    .pushTransparentRoute(
+                                                  ImagepageView(
+                                                    tagName: image,
+                                                    color: porto.primaryColor,
+                                                    image: image,
+                                                  ),
+                                                ),
+                                                child: Hero(
+                                                  tag: image,
+                                                  child: Image.asset(
+                                                    image,
+                                                    fit: BoxFit.contain,
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                    ),
+                            ],
+                          ),
                         ),
                   porto.fitur.isEmpty
                       ? Container()
@@ -443,41 +563,39 @@ class Frames extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: ClipRRect(
-          borderRadius: borderRadius,
-          child: Container(
-            color: secondaryColor,
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 75.0,
-                  child: Center(
-                    child: Text(
-                      device,
-                      style: Font.regular(
-                        fontSize: responsiveDouble(
-                          context,
-                          mobile: 20.0,
-                          desktop: 30.0,
-                        ),
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: ClipRRect(
+        borderRadius: borderRadius,
+        child: Container(
+          color: secondaryColor,
+          child: Column(
+            children: [
+              SizedBox(
+                height: 75.0,
+                child: Center(
+                  child: Text(
+                    device,
+                    style: Font.regular(
+                      fontSize: responsiveDouble(
+                        context,
+                        mobile: 20.0,
+                        desktop: 30.0,
                       ),
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 15.0),
-                  child: SizedBox(
-                    height: 150.0,
-                    child: imageWidget,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 15.0),
+                child: SizedBox(
+                  height: 150.0,
+                  child: imageWidget,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
