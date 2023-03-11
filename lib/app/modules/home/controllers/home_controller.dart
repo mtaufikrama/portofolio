@@ -7,19 +7,12 @@ import 'package:portofolio/app/modules/home/views/subview/portofolio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-import 'package:url_strategy/url_strategy.dart';
 import '../../../data/dll/font.dart';
 import '../../../data/dll/responsive.dart';
 
 class HomeController extends GetxController {
   final autoScrollController = AutoScrollController();
   final lang = Get.parameters['lang'] ?? Get.deviceLocale!.languageCode;
-
-  @override
-  void onInit() {
-    setPathUrlStrategy();
-    super.onInit();
-  }
 
   @override
   void onClose() {
