@@ -24,7 +24,7 @@ class AboutMeMenu extends GetView<HomeController> {
         children: [
           teksLanguage(
             (isi['about']!.title).toUpperCase(),
-            kodeBahasa: Get.parameters['lang'] ?? 'en',
+            kodeBahasa: controller.lang,
             style: Font.regular(
               fontSize: responsiveDouble(
                 context,
@@ -44,7 +44,7 @@ class AboutMeMenu extends GetView<HomeController> {
           ),
           teksLanguage(
             isi['about']!.subtitle,
-            kodeBahasa: Get.parameters['lang'] ?? 'en',
+            kodeBahasa: controller.lang,
             style: Font.regular(
               fontSize: responsiveDouble(
                 context,

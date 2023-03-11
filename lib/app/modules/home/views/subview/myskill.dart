@@ -17,12 +17,14 @@ class MySkillMenu extends GetView<HomeController> {
       children: [
         pieChart(
           context,
+          lang: controller.lang,
           hardOrsoft: 'hard',
           secondaryColor: const Color.fromARGB(255, 0, 79, 144),
           primaryColor: const Color.fromARGB(255, 105, 188, 255),
         ),
         pieChart(
           context,
+          lang: controller.lang,
           hardOrsoft: 'soft',
           primaryColor: const Color.fromARGB(255, 0, 79, 144),
           secondaryColor: const Color.fromARGB(255, 105, 188, 255),
@@ -34,6 +36,7 @@ class MySkillMenu extends GetView<HomeController> {
 
 Expanded pieChart(
   BuildContext context, {
+  required String lang,
   required String hardOrsoft,
   required Color primaryColor,
   required Color secondaryColor,
@@ -49,7 +52,7 @@ Expanded pieChart(
           children: [
             teksLanguage(
               (isi['${hardOrsoft}_skill']!.title).toUpperCase(),
-              kodeBahasa: Get.parameters['lang'] ?? 'en',
+              kodeBahasa: lang,
               style: Font.regular(
                 fontSize: responsiveDouble(
                   context,
@@ -83,9 +86,7 @@ Expanded pieChart(
                             child: Center(
                               child: teksLanguage(
                                 skill.keys.first,
-                                kodeBahasa: hardOrsoft == 'soft'
-                                    ? Get.parameters['lang'] ?? 'en'
-                                    : 'en',
+                                kodeBahasa: hardOrsoft == 'soft' ? lang : 'en',
                                 style: Font.regular(
                                   fontSize: 15.0,
                                   fontWeight: FontWeight.w500,

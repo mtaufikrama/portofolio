@@ -15,7 +15,6 @@ class PortofolioMenu extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    String lang = Get.parameters['lang'] ?? 'en';
     double height = getHeight(context) / 2;
     return Container(
       height: height <= 250 ? 250 : height,
@@ -37,7 +36,7 @@ class PortofolioMenu extends GetView<HomeController> {
           children: [
             teksLanguage(
               isi['portofolio']!.title.toUpperCase(),
-              kodeBahasa: lang,
+              kodeBahasa: controller.lang,
               style: Font.regular(
                 fontSize: responsiveDouble(
                   context,
@@ -65,7 +64,7 @@ class PortofolioMenu extends GetView<HomeController> {
                       child: InkWell(
                         onTap: () => Get.toNamed(Routes.PORTFOLIO, parameters: {
                           'id': index.toString(),
-                          'lang': lang,
+                          'lang': controller.lang,
                         }),
                         child: AspectRatio(
                           aspectRatio: 16 / 9,
@@ -107,7 +106,7 @@ class PortofolioMenu extends GetView<HomeController> {
                                         ),
                                         subtitle: teksLanguage(
                                           porto.kategori,
-                                          kodeBahasa: lang,
+                                          kodeBahasa: controller.lang,
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                           style: Font.regular(

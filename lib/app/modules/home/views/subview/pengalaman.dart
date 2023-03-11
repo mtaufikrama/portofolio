@@ -23,7 +23,7 @@ class ExperienceMenu extends GetView<HomeController> {
           children: [
             teksLanguage(
               (isi['experience']!.title).toUpperCase(),
-              kodeBahasa: Get.parameters['lang'] ?? 'en',
+              kodeBahasa: controller.lang,
               style: Font.regular(
                 fontSize: responsiveDouble(
                   context,
@@ -87,8 +87,7 @@ class ExperienceMenu extends GetView<HomeController> {
                                         ),
                                         subtitle: teksLanguage(
                                           porto['deskripsi'],
-                                          kodeBahasa:
-                                              Get.parameters['lang'] ?? 'en',
+                                          kodeBahasa: controller.lang,
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                           style: Font.regular(
@@ -102,8 +101,7 @@ class ExperienceMenu extends GetView<HomeController> {
                                         ),
                                         title: teksLanguage(
                                           porto['nama']!,
-                                          kodeBahasa:
-                                              Get.parameters['lang'] ?? 'en',
+                                          kodeBahasa: controller.lang,
                                           style: Font.regular(
                                             color: Colors.white,
                                             fontSize: responsiveDouble(

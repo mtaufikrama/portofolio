@@ -36,7 +36,7 @@ class AppBarButton extends GetView<HomeController> {
                       icon: e['icon'] as ImageIcon,
                       label: teksLanguage(
                         e['label'] as String,
-                        kodeBahasa: Get.parameters['lang'] ?? 'en',
+                        kodeBahasa: controller.lang,
                         style: Font.regular(
                           fontSize: 17.0,
                         ),

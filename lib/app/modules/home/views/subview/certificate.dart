@@ -34,7 +34,7 @@ class CertificateMenu extends GetView<HomeController> {
           children: [
             teksLanguage(
               (isi['certificate']!.title).toUpperCase(),
-              kodeBahasa: Get.parameters['lang'] ?? 'en',
+              kodeBahasa: controller.lang,
               style: Font.regular(
                 color: Colors.black,
                 fontSize: responsiveDouble(
@@ -89,7 +89,7 @@ class CertificateMenu extends GetView<HomeController> {
                                   ),
                                   title: teksLanguage(
                                     skill.nama,
-                                    kodeBahasa: Get.parameters['lang'] ?? 'en',
+                                    kodeBahasa: controller.lang,
                                     style: Font.regular(
                                       color: Colors.white,
                                       fontSize: responsiveDouble(

@@ -28,7 +28,7 @@ class ClosingMenu extends GetView<HomeController> {
               padding: const EdgeInsets.all(15.0),
               child: teksLanguage(
                 (isi['kontak']!.title).toUpperCase(),
-                kodeBahasa: Get.parameters['lang'] ?? 'en',
+                kodeBahasa: controller.lang,
                 style: Font.regular(
                   fontSize: responsiveDouble(
                     context,

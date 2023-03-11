@@ -100,7 +100,7 @@ class OpeningMenu extends GetView<HomeController> {
                         ),
                         label: teksLanguage(
                           "HIRE ME",
-                          kodeBahasa: Get.parameters['lang'] ?? 'en',
+                          kodeBahasa: controller.lang,
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           style: Font.regular(
