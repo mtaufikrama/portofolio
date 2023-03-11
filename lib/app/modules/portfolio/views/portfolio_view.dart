@@ -397,6 +397,12 @@ class PortfolioView extends GetView<PortfolioController> {
                                                     color: porto.primaryColor,
                                                     image: image,
                                                   ),
+                                                  reverseTransitionDuration:
+                                                      const Duration(
+                                                          milliseconds: 500),
+                                                  transitionDuration:
+                                                      const Duration(
+                                                          milliseconds: 500),
                                                 ),
                                                 child: Hero(
                                                   tag: image,
