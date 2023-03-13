@@ -1,4 +1,5 @@
 import 'package:portofolio/app/data/dll/assets.dart';
+import 'package:portofolio/app/data/dll/kategori.dart';
 import 'package:portofolio/app/data/object_class/porto_class.dart';
 import 'package:flutter/material.dart';
 
@@ -7,9 +8,34 @@ final listPortofolio = <Portfolio>[
   DataPorto.mecrypt,
   DataPorto.crofflite,
   DataPorto.bayu,
+  DataPorto.wikenyus,
 ];
 
 class DataPorto {
+  static const wikenyus = Portfolio(
+    nama: 'Wikenyus',
+    logo: Porto.wikenyus,
+    deskripsi: 'deskripsi',
+    kategori: Kategori.selfMade,
+    tujuan: 'tujuan',
+    frame: Porto.frameWikenyus,
+    frameAndroid: 3,
+    frameWebsite: 0,
+    primaryColor: Color.fromARGB(255, 255, 0, 0),
+    secondaryColor: Color.fromARGB(255, 136, 0, 0),
+    urlAndroid:
+        'https://drive.google.com/drive/folders/1_2zvGR2nXTzWXXjYqBxz4RVBRlZR23Ta?usp=share_link',
+    urlWebsite: '',
+    team: [
+      Team(
+        nama: 'Muhammad Taufik Ramadhan',
+        image: Porto.taufik,
+        sebagai: 'Full Stack Developer',
+      ),
+    ],
+    fitur: [],
+    teknologi: [],
+  );
   static const thrilogic = Portfolio(
     nama: 'ThriLogic',
     logo: Porto.thrilogic,
@@ -17,7 +43,7 @@ class DataPorto {
         'ThriLogic is an application designed to facilitate users in purchasing thrift products or high-quality used goods at the most competitive prices. Through this application, users can conveniently buy thrift products online and enjoy a more efficient shopping experience.',
     tujuan:
         'ThriLogic was created to simplify the process of buying thrift products or high-quality used goods at the best prices. This application helps users find the items they want at a more affordable price.',
-    kategori: 'Collab App',
+    kategori: Kategori.collab,
     frame: Porto.frameThriLogic,
     frameAndroid: 3,
     frameWebsite: 0,
@@ -69,7 +95,7 @@ class DataPorto {
     secondaryColor: Color.fromRGBO(0, 16, 71, 1),
     tujuan:
         'MeCrypt aims to enable users to simulate cryptocurrency transactions before making actual transactions.',
-    kategori: 'Self-made App',
+    kategori: Kategori.selfMade,
     team: [
       Team(
         image: Porto.taufik,
@@ -105,7 +131,7 @@ class DataPorto {
     secondaryColor: Color.fromARGB(255, 238, 163, 38),
     tujuan:
         'Crofflite is designed to assist croffle sellers in optimizing their business and increasing efficiency in managing queues and finances on a daily basis.',
-    kategori: 'Self-made App',
+    kategori: Kategori.selfMade,
     team: [
       Team(
         image: Porto.taufik,
@@ -138,7 +164,7 @@ class DataPorto {
     primaryColor: Color.fromARGB(255, 0, 188, 241),
     secondaryColor: Color.fromARGB(255, 35, 136, 182),
     tujuan: 'Bayu aims to improve the user interface of the By.U application.',
-    kategori: 'Redesign App',
+    kategori: Kategori.reDesign,
     team: [
       Team(
         image: Porto.taufik,

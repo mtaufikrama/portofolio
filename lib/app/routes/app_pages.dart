@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/error/bindings/error_binding.dart';
+import '../modules/error/views/error_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/portfolio/bindings/portfolio_binding.dart';
@@ -24,6 +26,11 @@ class AppPages {
       name: _Paths.PORTFOLIO,
       page: () => const PortfolioView(),
       binding: PortfolioBinding(),
+    ),
+    GetPage(
+      name: _Paths.ERROR,
+      page: () => const ErrorView(),
+      binding: ErrorBinding(),
     ),
   ];
 }

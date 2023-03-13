@@ -12,7 +12,8 @@ import '../../../data/dll/responsive.dart';
 
 class HomeController extends GetxController {
   final autoScrollController = AutoScrollController();
-  final lang = Get.parameters['lang'] ?? Get.deviceLocale!.languageCode;
+  final lang = Get.parameters['lang'] ??
+      (Get.deviceLocale != null ? Get.deviceLocale!.languageCode : 'en');
 
   @override
   void onClose() {
