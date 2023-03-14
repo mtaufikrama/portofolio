@@ -9,9 +9,34 @@ final listPortofolio = <Portfolio>[
   DataPorto.crofflite,
   DataPorto.bayu,
   DataPorto.wikenyus,
+  DataPorto.gezunt,
 ];
 
 class DataPorto {
+  static const gezunt = Portfolio(
+    nama: "Gezunt",
+    logo: Porto.gezunt,
+    deskripsi: 'deskripsi',
+    kategori: Kategori.selfMade,
+    tujuan: 'tujuan',
+    frame: Porto.frameGezunt,
+    frameAndroid: 3,
+    frameWebsite: 0,
+    primaryColor: Color.fromARGB(255, 255, 17, 0),
+    secondaryColor: Color.fromARGB(255, 187, 12, 0),
+    urlAndroid:
+        'https://drive.google.com/drive/folders/1SUJChR3B_Ed5GHCepvKQrOP78MYEwTHm?usp=share_link',
+    urlWebsite: '',
+    team: [
+      Team(
+        nama: 'Muhammad Taufik Ramadhan',
+        image: Porto.taufik,
+        sebagai: 'Full Stack Developer',
+      ),
+    ],
+    fitur: [],
+    teknologi: [],
+  );
   static const wikenyus = Portfolio(
     nama: 'Wikenyus',
     logo: Porto.wikenyus,
@@ -25,7 +50,7 @@ class DataPorto {
     secondaryColor: Color.fromARGB(255, 136, 0, 0),
     urlAndroid:
         'https://drive.google.com/drive/folders/1_2zvGR2nXTzWXXjYqBxz4RVBRlZR23Ta?usp=share_link',
-    urlWebsite: '',
+    urlWebsite: 'https://wikenyus.metir.my.id/',
     team: [
       Team(
         nama: 'Muhammad Taufik Ramadhan',

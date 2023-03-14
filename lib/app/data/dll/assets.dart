@@ -24,8 +24,10 @@ class Porto {
   static const mecrypt = 'assets/portofolio/mecrypt/mecrypt.jpg';
   static const thrilogic = 'assets/portofolio/thrilogic/thrilogic.jpg';
   static const wikenyus = 'assets/portofolio/wikenyus/wikenyus.png';
+  static const gezunt = 'assets/portofolio/gezunt/gezunt.png';
   static const frameBayu = 'assets/portofolio/bayu/frame_bayu.png';
   static const frameWikenyus = 'assets/portofolio/wikenyus/frame_wikenyus.png';
+  static const frameGezunt = 'assets/portofolio/gezunt/frame_gezunt.png';
   static const frameCrofflite =
       'assets/portofolio/crofflite/frame_crofflite.png';
   static const frameMeCrypt = 'assets/portofolio/mecrypt/frame_mecrypt.png';

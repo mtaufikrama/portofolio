@@ -7,6 +7,7 @@ import 'package:portofolio/app/data/dll/responsive.dart';
 import 'package:portofolio/app/data/object_class/porto_class.dart';
 import 'package:portofolio/app/data/screen/inti_apps.dart';
 import 'package:portofolio/app/modules/portfolio/controllers/portfolio_controller.dart';
+import 'package:portofolio/app/modules/portfolio/views/frame.dart';
 import 'package:portofolio/app/modules/portfolio/views/imagepage_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
@@ -544,62 +545,6 @@ class PortfolioView extends GetView<PortfolioController> {
                 ],
               ),
             ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class Frames extends StatelessWidget {
-  const Frames({
-    super.key,
-    required this.device,
-    required this.secondaryColor,
-    required this.borderRadius,
-    required this.imageWidget,
-  });
-
-  final String device;
-  final Color secondaryColor;
-  final BorderRadiusGeometry borderRadius;
-  final Widget imageWidget;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: ClipRRect(
-        borderRadius: borderRadius,
-        child: Container(
-          color: secondaryColor,
-          child: Column(
-            children: [
-              SizedBox(
-                height: 75.0,
-                child: Center(
-                  child: Text(
-                    device,
-                    style: Font.regular(
-                      fontSize: responsiveDouble(
-                        context,
-                        mobile: 20.0,
-                        desktop: 30.0,
-                      ),
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 15.0),
-                child: SizedBox(
-                  height: 150.0,
-                  child: imageWidget,
-                ),
-              ),
-            ],
           ),
         ),
       ),
