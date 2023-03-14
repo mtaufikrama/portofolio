@@ -1,5 +1,6 @@
 import 'package:portofolio/app/data/dll/assets.dart';
 import 'package:portofolio/app/data/dll/kategori.dart';
+import 'package:portofolio/app/data/dll/packages.dart';
 import 'package:portofolio/app/data/object_class/porto_class.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ final listPortofolio = <Portfolio>[
 ];
 
 class DataPorto {
-  static const gezunt = Portfolio(
+  static final gezunt = Portfolio(
     nama: "Gezunt",
     logo: Porto.gezunt,
     deskripsi: 'deskripsi',
@@ -22,13 +23,13 @@ class DataPorto {
     frame: Porto.frameGezunt,
     frameAndroid: 3,
     frameWebsite: 0,
-    primaryColor: Color.fromARGB(255, 255, 17, 0),
-    secondaryColor: Color.fromARGB(255, 187, 12, 0),
+    primaryColor: const Color.fromARGB(255, 255, 17, 0),
+    secondaryColor: const Color.fromARGB(255, 187, 12, 0),
     urlAndroid:
         'https://drive.google.com/drive/folders/1SUJChR3B_Ed5GHCepvKQrOP78MYEwTHm?usp=share_link',
     urlWebsite: '',
     team: [
-      Team(
+      const Team(
         nama: 'Muhammad Taufik Ramadhan',
         image: Porto.taufik,
         sebagai: 'Full Stack Developer',
@@ -36,8 +37,22 @@ class DataPorto {
     ],
     fitur: [],
     teknologi: [],
+    depedencies: [
+      Packages.hive,
+      Packages.teledart,
+      Packages.imagePicker,
+      Packages.googleFonts,
+      Packages.hiveFlutter,
+      Packages.intl,
+      Packages.dismissiblePage,
+      Packages.videoPlayer,
+      Packages.flutterLauncherIcons,
+      Packages.hiveGenerator,
+      Packages.buildRunner,
+    ],
   );
-  static const wikenyus = Portfolio(
+
+  static final wikenyus = Portfolio(
     nama: 'Wikenyus',
     logo: Porto.wikenyus,
     deskripsi: 'deskripsi',
@@ -46,13 +61,13 @@ class DataPorto {
     frame: Porto.frameWikenyus,
     frameAndroid: 3,
     frameWebsite: 0,
-    primaryColor: Color.fromARGB(255, 255, 0, 0),
-    secondaryColor: Color.fromARGB(255, 136, 0, 0),
+    primaryColor: const Color.fromARGB(255, 255, 0, 0),
+    secondaryColor: const Color.fromARGB(255, 136, 0, 0),
     urlAndroid:
         'https://drive.google.com/drive/folders/1_2zvGR2nXTzWXXjYqBxz4RVBRlZR23Ta?usp=share_link',
     urlWebsite: 'https://wikenyus.metir.my.id/',
     team: [
-      Team(
+      const Team(
         nama: 'Muhammad Taufik Ramadhan',
         image: Porto.taufik,
         sebagai: 'Full Stack Developer',
@@ -60,8 +75,21 @@ class DataPorto {
     ],
     fitur: [],
     teknologi: [],
+    depedencies: [
+      Packages.animatedSizeAndFade,
+      Packages.carouselslider,
+      Packages.dismissiblePage,
+      Packages.googleFonts,
+      Packages.http,
+      Packages.translator,
+      Packages.universalHTML,
+      Packages.urlLauncher,
+      Packages.urlStrategy,
+      Packages.webViewFlutter,
+    ],
   );
-  static const thrilogic = Portfolio(
+
+  static final thrilogic = Portfolio(
     nama: 'ThriLogic',
     logo: Porto.thrilogic,
     deskripsi:
@@ -72,28 +100,28 @@ class DataPorto {
     frame: Porto.frameThriLogic,
     frameAndroid: 3,
     frameWebsite: 0,
-    primaryColor: Color.fromRGBO(255, 110, 42, 1),
-    secondaryColor: Color.fromRGBO(166, 87, 55, 1),
+    primaryColor: const Color.fromRGBO(255, 110, 42, 1),
+    secondaryColor: const Color.fromRGBO(166, 87, 55, 1),
     urlAndroid:
         'https://drive.google.com/drive/folders/1FcygwjRk471Skf2SiNRsuT6vVhAmNGQq?usp=share_link',
     urlWebsite: 'https://thrilogic.metir.my.id/',
     team: [
-      Team(
+      const Team(
         nama: 'Muhammad Taufik Ramadhan',
         image: Porto.taufik,
         sebagai: 'Project Manager & UX Developer',
       ),
-      Team(
+      const Team(
         nama: 'Roni Setiawan',
         image: Porto.roni,
         sebagai: 'UI / UX Designer',
       ),
-      Team(
+      const Team(
         nama: 'Delvy Toding Sandatoding',
         image: Porto.delvy,
         sebagai: 'UI Developer',
       ),
-      Team(
+      const Team(
         nama: 'Yozi Berlinda',
         image: Porto.yozi,
         sebagai: 'UI Developer',
@@ -109,20 +137,49 @@ class DataPorto {
       'Provider as State Management.',
       'API from Mitra Nurul Fikri to read, add, update and delete products data.',
     ],
+    depedencies: [
+      Packages.animatedSizeAndFade,
+      Packages.autoSizeText,
+      Packages.badges,
+      Packages.carouselslider,
+      Packages.dayNightSwitcher,
+      Packages.deviceInfoPlus,
+      Packages.doubleBackToClose,
+      Packages.dropdownSearch,
+      Packages.flutterLocalNotifications,
+      Packages.flutterOnboardingSlider,
+      Packages.flutterRatingBar,
+      Packages.googleFonts,
+      Packages.hive,
+      Packages.hiveFlutter,
+      Packages.http,
+      Packages.imagePicker,
+      Packages.intl,
+      Packages.localStorage,
+      Packages.lottie,
+      Packages.provider,
+      Packages.searchPage,
+      Packages.teledart,
+      Packages.translator,
+      Packages.waveTransition,
+      Packages.flutterAppName,
+      Packages.flutterLauncherIcons,
+    ],
   );
-  static const mecrypt = Portfolio(
+
+  static final mecrypt = Portfolio(
     nama: 'MeCrypt',
     logo: Porto.mecrypt,
     frame: Porto.frameMeCrypt,
     frameAndroid: 3,
     frameWebsite: 3,
-    primaryColor: Color.fromARGB(255, 0, 6, 183),
-    secondaryColor: Color.fromRGBO(0, 16, 71, 1),
+    primaryColor: const Color.fromARGB(255, 0, 6, 183),
+    secondaryColor: const Color.fromRGBO(0, 16, 71, 1),
     tujuan:
         'MeCrypt aims to enable users to simulate cryptocurrency transactions before making actual transactions.',
     kategori: Kategori.selfMade,
     team: [
-      Team(
+      const Team(
         image: Porto.taufik,
         nama: 'Muhammad Taufik Ramadhan',
         sebagai: 'Full Stack Developer',
@@ -144,21 +201,36 @@ class DataPorto {
       'Uses Hive as the local database.',
       'Utilizes the Indodax API to obtain real-time cryptocurrency exchange rate data.',
     ],
+    depedencies: [
+      Packages.awesomeDialog,
+      Packages.dismissiblePage,
+      Packages.doubleBackToClose,
+      Packages.getx,
+      Packages.googleFonts,
+      Packages.hive,
+      Packages.hiveFlutter,
+      Packages.http,
+      Packages.intl,
+      Packages.pageTransition,
+      Packages.provider,
+      Packages.urlStrategy,
+      Packages.flutterLauncherIcons,
+    ],
   );
 
-  static const crofflite = Portfolio(
+  static final crofflite = Portfolio(
     nama: 'Crofflite',
     logo: Porto.crofflite,
     frame: Porto.frameCrofflite,
     frameAndroid: 3,
     frameWebsite: 0,
-    primaryColor: Color.fromARGB(255, 251, 209, 123),
-    secondaryColor: Color.fromARGB(255, 238, 163, 38),
+    primaryColor: const Color.fromARGB(255, 251, 209, 123),
+    secondaryColor: const Color.fromARGB(255, 238, 163, 38),
     tujuan:
         'Crofflite is designed to assist croffle sellers in optimizing their business and increasing efficiency in managing queues and finances on a daily basis.',
     kategori: Kategori.selfMade,
     team: [
-      Team(
+      const Team(
         image: Porto.taufik,
         nama: 'Muhammad Taufik Ramadhan',
         sebagai: 'Full Stack Developer',
@@ -179,19 +251,28 @@ class DataPorto {
       'Uses Flutter as a framework for developing mobile applications and websites.',
       'Utilizes Localstorage as the local database.',
     ],
+    depedencies: [
+      Packages.googleFonts,
+      Packages.hive,
+      Packages.imagePicker,
+      Packages.intl,
+      Packages.localStorage,
+      Packages.flutterLauncherIcons,
+    ],
   );
-  static const bayu = Portfolio(
+
+  static final bayu = Portfolio(
     nama: 'Bayu',
     logo: Porto.bayu,
     frame: Porto.frameBayu,
     frameAndroid: 3,
     frameWebsite: 3,
-    primaryColor: Color.fromARGB(255, 0, 188, 241),
-    secondaryColor: Color.fromARGB(255, 35, 136, 182),
+    primaryColor: const Color.fromARGB(255, 0, 188, 241),
+    secondaryColor: const Color.fromARGB(255, 35, 136, 182),
     tujuan: 'Bayu aims to improve the user interface of the By.U application.',
     kategori: Kategori.reDesign,
     team: [
-      Team(
+      const Team(
         image: Porto.taufik,
         nama: 'Muhammad Taufik Ramadhan',
         sebagai: 'Full Stack Developer',
@@ -204,5 +285,10 @@ class DataPorto {
         'Bayu is an application that has been redesigned from the By.U application.',
     fitur: [],
     teknologi: [],
+    depedencies: [
+      Packages.imagePicker,
+      Packages.flutterLauncherIcons,
+      Packages.flutterAppName,
+    ],
   );
 }

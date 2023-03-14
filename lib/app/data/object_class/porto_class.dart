@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portofolio/app/data/dll/packages.dart';
 
 class Portfolio {
   final String nama;
@@ -14,6 +15,7 @@ class Portfolio {
   final String urlWebsite;
   final String deskripsi;
   final List<String> fitur;
+  final List<PackagesModel> depedencies;
   final List<String> teknologi;
   final String kategori;
   const Portfolio({
@@ -26,6 +28,7 @@ class Portfolio {
     required this.frameAndroid,
     required this.frameWebsite,
     required this.primaryColor,
+    required this.depedencies,
     required this.secondaryColor,
     required this.urlAndroid,
     required this.urlWebsite,

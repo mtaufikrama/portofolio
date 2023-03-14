@@ -419,6 +419,67 @@ class PortfolioView extends GetView<PortfolioController> {
                             ],
                           ),
                         ),
+                  porto.depedencies.isEmpty
+                      ? Container()
+                      : Container(
+                          margin: const EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(15),
+                          color: porto.secondaryColor,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 10),
+                                color: Colors.white,
+                                child: teksLanguage(
+                                  ('depedencies').toUpperCase(),
+                                  kodeBahasa: controller.lang,
+                                  style: Font.regular(
+                                    color: porto.secondaryColor,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Column(
+                                  children: List.generate(
+                                    porto.depedencies.length,
+                                    (index) => Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 25,
+                                          child: teksLanguage(
+                                            porto.depedencies[index].nama,
+                                            kodeBahasa: controller.lang,
+                                            style: Font.regular(
+                                              fontSize: 20.0,
+                                              color: Colors.white,
+                                            ),
+                                            textAlign: TextAlign.start,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: teksLanguage(
+                                            porto.depedencies[index].definisi,
+                                            kodeBahasa: controller.lang,
+                                            style: Font.regular(
+                                              fontSize: 20.0,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                   porto.fitur.isEmpty
                       ? Container()
                       : Container(
