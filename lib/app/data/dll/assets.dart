@@ -26,6 +26,7 @@ class Porto {
   static const wikenyus = 'assets/portofolio/wikenyus/wikenyus.png';
   static const gezunt = 'assets/portofolio/gezunt/gezunt.png';
   static const frameBayu = 'assets/portofolio/bayu/frame_bayu.png';
+  static const frameNirdesa = 'assets/portofolio/nirdesa/frame_nirdesa.png';
   static const frameWikenyus = 'assets/portofolio/wikenyus/frame_wikenyus.png';
   static const frameGezunt = 'assets/portofolio/gezunt/frame_gezunt.png';
   static const frameCrofflite =

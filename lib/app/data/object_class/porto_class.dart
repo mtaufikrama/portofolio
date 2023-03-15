@@ -28,13 +28,13 @@ class Portfolio {
     required this.frameAndroid,
     required this.frameWebsite,
     required this.primaryColor,
-    required this.depedencies,
     required this.secondaryColor,
     required this.urlAndroid,
     required this.urlWebsite,
     required this.team,
     required this.fitur,
     required this.teknologi,
+    required this.depedencies,
   });
 }
 

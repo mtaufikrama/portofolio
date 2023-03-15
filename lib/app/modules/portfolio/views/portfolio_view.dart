@@ -448,31 +448,36 @@ class PortfolioView extends GetView<PortfolioController> {
                                 child: Column(
                                   children: List.generate(
                                     porto.depedencies.length,
-                                    (index) => Row(
-                                      children: [
-                                        SizedBox(
-                                          width: 25,
-                                          child: teksLanguage(
-                                            porto.depedencies[index].nama,
-                                            kodeBahasa: controller.lang,
-                                            style: Font.regular(
-                                              fontSize: 20.0,
-                                              color: Colors.white,
-                                            ),
-                                            textAlign: TextAlign.start,
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: teksLanguage(
-                                            porto.depedencies[index].definisi,
-                                            kodeBahasa: controller.lang,
-                                            style: Font.regular(
-                                              fontSize: 20.0,
-                                              color: Colors.white,
+                                    (index) => Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 10,
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.stretch,
+                                        children: [
+                                          SizedBox(
+                                            width: 25,
+                                            child: Text(
+                                              porto.depedencies[index].nama,
+                                              style: Font.regular(
+                                                fontSize: 25.0,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              textAlign: TextAlign.center,
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                          teksLanguage(
+                                              porto.depedencies[index].definisi,
+                                              kodeBahasa: controller.lang,
+                                              style: Font.regular(
+                                                fontSize: 20.0,
+                                                color: Colors.white,
+                                              ),
+                                              textAlign: TextAlign.justify),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
