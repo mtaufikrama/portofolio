@@ -100,9 +100,12 @@ class PortofolioMenu extends GetView<HomeController> {
                                     children: [
                                       ListTile(
                                         leading: CircleAvatar(
-                                          backgroundImage: AssetImage(
-                                            porto.logo,
-                                          ),
+                                          backgroundImage: porto.logo.isEmpty
+                                              ? null
+                                              : AssetImage(
+                                                  porto.logo,
+                                                ),
+                                          backgroundColor: porto.primaryColor,
                                         ),
                                         subtitle: teksLanguage(
                                           porto.kategori,

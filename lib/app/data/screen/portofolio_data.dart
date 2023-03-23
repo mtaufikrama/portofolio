@@ -12,18 +12,18 @@ const listPortofolio = [
   DataPorto.wikenyus,
   DataPorto.gezunt,
   DataPorto.nirdesa,
-  DataPorto.helpdesk,
+  DataPorto.poendoeng,
 ];
 
 class DataPorto {
-  static const helpdesk = Portfolio(
-    nama: 'HelpDesk',
-    logo: 'logo',
+  static const poendoeng = Portfolio(
+    nama: 'PoeNDoeNG',
+    logo: Porto.poendoeng,
     deskripsi: 'deskripsi',
     kategori: Kategori.selfMade,
     tujuan: 'tujuan',
-    frame: 'frame',
-    frameAndroid: 0,
+    frame: Porto.framePoendoeng,
+    frameAndroid: 3,
     frameWebsite: 0,
     primaryColor: Colors.blue,
     secondaryColor: Colors.blue,
@@ -43,7 +43,7 @@ class DataPorto {
   );
   static const nirdesa = Portfolio(
     nama: 'NirDesa',
-    logo: 'logo',
+    logo: '',
     deskripsi: 'deskripsi',
     kategori: Kategori.selfMade,
     tujuan: 'tujuan',

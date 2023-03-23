@@ -21,11 +21,13 @@ class Porto {
   static const yozi = 'assets/portofolio/avatar/yozi.png';
   static const bayu = 'assets/portofolio/bayu/bayu.png';
   static const crofflite = 'assets/portofolio/crofflite/crofflite.png';
+  static const poendoeng = 'assets/portofolio/poendoeng/poendoeng.png';
   static const mecrypt = 'assets/portofolio/mecrypt/mecrypt.jpg';
   static const thrilogic = 'assets/portofolio/thrilogic/thrilogic.jpg';
   static const wikenyus = 'assets/portofolio/wikenyus/wikenyus.png';
   static const gezunt = 'assets/portofolio/gezunt/gezunt.png';
   static const frameBayu = 'assets/portofolio/bayu/frame_bayu.png';
+  static const framePoendoeng = 'assets/portofolio/poendoeng/frame_poendoeng.png';
   static const frameNirdesa = 'assets/portofolio/nirdesa/frame_nirdesa.png';
   static const frameWikenyus = 'assets/portofolio/wikenyus/frame_wikenyus.png';
   static const frameGezunt = 'assets/portofolio/gezunt/frame_gezunt.png';

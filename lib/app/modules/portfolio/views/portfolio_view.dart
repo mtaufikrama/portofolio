@@ -51,7 +51,12 @@ class PortfolioView extends GetView<PortfolioController> {
                       children: [
                         CircleAvatar(
                           radius: 40,
-                          backgroundImage: AssetImage(porto.logo),
+                          backgroundImage: porto.logo.isEmpty
+                              ? null
+                              : AssetImage(
+                                  porto.logo,
+                                ),
+                          backgroundColor: porto.primaryColor,
                         ),
                         BorderedText(
                           strokeWidth: 1.5,
