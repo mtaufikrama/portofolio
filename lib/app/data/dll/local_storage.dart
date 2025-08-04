@@ -1,18 +1,19 @@
 import 'package:localstorage/localstorage.dart';
 
 class Storages {
-  static LocalStorage storages = LocalStorage('myporto');
+  static LocalStorage storages = localStorage;
 
   static Future<void> setKodeBahasa(String kodeBahasa) async {
-    await storages.deleteItem('kodeBahasa');
-    await storages.setItem('kodeBahasa', kodeBahasa);
+    storages.removeItem('kodeBahasa');
+    storages.setItem('kodeBahasa', kodeBahasa);
   }
 
-  static Future<void> setIndexLanguage(int index) async {
-    await storages.deleteItem('indexLanguage');
-    await storages.setItem('indexLanguage', index);
+  static void setIndexLanguage(int index) {
+    storages.removeItem('indexLanguage');
+    storages.setItem('indexLanguage', index.toString());
   }
 
   static String get getkodeBahasa => storages.getItem('kodeBahasa') ?? 'id';
-  static int get getIndexLanguage => storages.getItem('indexLanguage') ?? 0;
+  static int get getIndexLanguage =>
+      int.parse(storages.getItem('indexLanguage') ?? '0');
 }

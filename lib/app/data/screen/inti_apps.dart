@@ -28,7 +28,7 @@ final Map<String, Isi> isi = {
     title: 'Experience',
     subtitle: listPengalaman,
   ),
-  'portofolio': Isi(
+  'portofolio': const Isi(
     title: 'Portfolio',
     subtitle: listPortofolio,
   ),
